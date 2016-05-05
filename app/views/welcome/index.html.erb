@@ -1,0 +1,21 @@
+<style>
+  .login_container{
+    width: 70%;
+    height: 50%;
+  }
+  .text_box{
+    display: inherit;
+    width: 50%;
+    height: 10px;
+  }
+</style>
+<h2>cinemas</h2>
+<%=form_for(:welcome, :url =>{:controller => 'welcome', :action => 'login'}) do |f|%>
+    <h2 class="login_head">login</h2>
+    <p><%=f.email_field :email, class:'text_box'%></p>
+    <p><%=f.password_field :encrypted_password%></p>
+    <p><%=f.submit :login%></p>
+    <%flash.each do |name,msg|%>
+    <%=msg%>
+    <% end %>
+<% end %>

@@ -1,0 +1,9 @@
+<h2>cinemas</h2>
+<%flash.each do |name,msg|%>
+  <%if name!="notice"%>
+        <%=msg%>
+        <br>
+    <%end%>
+<%end%>
+<%= link_to 'show_cinema', controller: 'cinemas', action: 'show_cinemas'%>
+<%= link_to 'show_times', controller: 'cinemas', action: 'show_times'%>

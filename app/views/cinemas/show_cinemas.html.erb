@@ -1,0 +1,28 @@
+
+<style>
+  .header_container{
+    width: 100%;
+    background-color: black;
+    margin: 0 auto;
+    margin-bottom: 12px;
+  }
+  .list_container{
+    width: 70%;
+    background-color:#FCF6E8;
+    margin: 0 auto;
+  }
+  .film_container{
+    display: inline-block;
+    width: 150px;
+    height: 75px;
+    margin: 10px;
+    border: 3px solid #73AD21;
+  }
+</style>
+<h1 class="header_container"><font color="#f0ffff">movies on show</font></h1>
+<div class="list_container">
+  <%@cinemas.each do |film|%>
+      <div class= "film_container" ><%=film%></div>
+   <%end %>
+
+ </div>

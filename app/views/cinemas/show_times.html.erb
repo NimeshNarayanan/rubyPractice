@@ -1,0 +1,41 @@
+<style>
+  .header_container{
+    width: 100%;
+    background-color: black;
+    margin: 0 auto;
+    margin-bottom: 12px;
+  }
+  .list_container{
+    width: 70%;
+    background-color:#FCF6E8;
+    margin: 0 auto;
+  }
+  .film_container{
+    display: inline-block;
+    width: 80%;
+    height: 75px;
+    margin: 10px;
+    /*border: 3px solid #73AD21;*/
+  }
+  .content_holder{
+    display: inline-block;
+    margin: 10px;
+    width: 40%;
+    height: 50px;
+    border: 3px solid #BBBBBB;
+    align-content: center;
+  }
+</style>
+<h2>Running Cinema Time Sheet</h2>
+<div class="list_container">
+  <%@cinema_time_details.each do |film|%>
+    <div class="film_container">
+      <div class="content_holder">
+        <%=film[0]%>
+      </div>
+      <div class="content_holder">
+        <%=film[1]%>
+      </div>
+    </div>
+  <%end%>
+</div>
